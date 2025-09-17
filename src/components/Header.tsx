@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
           <span className="text-xl font-bold text-primary">Smart Student Hub</span>
         </div>
         
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="nav-links">
           <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
             Features
           </a>
@@ -28,12 +29,16 @@ const Header = () => {
         </nav>
         
         <div className="flex items-center space-x-4">
-          <Button variant="ghost" className="hidden md:inline-flex">
-            Sign In
-          </Button>
-          <Button className="bg-primary hover:bg-primary-dark">
-            Get Started
-          </Button>
+          <Link to="/signin">
+            <Button variant="ghost" className="hidden md:inline-flex">
+              Sign In
+            </Button>
+          </Link>
+          <Link to="/dashboard">
+            <Button className="bg-primary hover:bg-primary-dark">
+              Get Started
+            </Button>
+          </Link>
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />
           </Button>

@@ -100,6 +100,39 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
   }
+  
+  /* Enhanced responsive typography */
+  h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl;
+  }
+  
+  h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+  }
+  
+  h3 {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+  
+  /* Improved container spacing */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Enhanced button responsiveness */
+  .responsive-button-group {
+    @apply flex flex-col sm:flex-row gap-3 sm:gap-4;
+  }
+  
+  /* Better mobile navigation */
+  .mobile-nav {
+    @apply md:hidden;
+  }
+  
+  /* Improved card layouts */
+  .card-grid {
+    @apply grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  }
 }
 
 @layer components {
@@ -125,5 +158,42 @@
   
   .shadow-hero {
     box-shadow: var(--shadow-hero);
+  }
+  
+  /* Enhanced responsive components */
+  .responsive-grid {
+    @apply grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+  
+  .responsive-section {
+    @apply py-12 sm:py-16 lg:py-20 xl:py-24;
+  }
+  
+  .responsive-spacing {
+    @apply space-y-6 sm:space-y-8 lg:space-y-10;
+  }
+  
+  .mobile-optimized {
+    @apply px-4 sm:px-6 lg:px-8 py-4 sm:py-6;
+  }
+  
+  /* Better form layouts */
+  .form-group {
+    @apply space-y-2 sm:space-y-3;
+  }
+  
+  /* Enhanced navigation */
+  .nav-links {
+    @apply hidden md:flex items-center space-x-4 lg:space-x-8;
+  }
+  
+  /* Improved hero sections */
+  .hero-content {
+    @apply pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 lg:pb-20;
+  }
+  
+  /* Better image containers */
+  .image-container {
+    @apply relative rounded-2xl lg:rounded-3xl overflow-hidden;
   }
 }

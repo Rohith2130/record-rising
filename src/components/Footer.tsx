@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -23,11 +24,16 @@ const Footer = () => {
               of every learner in your institution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" className="gradient-primary shadow-hero group">
-                Schedule Demo
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/5">
+              <Link to="/signin">
+                <Button size="lg" className="gradient-primary shadow-hero group">
+                  Schedule Demo
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/5" onClick={() => {
+                const element = document.getElementById('contact');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}>
                 Contact Sales
               </Button>
             </div>

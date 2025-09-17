@@ -71,25 +71,25 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-16">
+    <section id="features" className="responsive-section bg-muted/30">
+      <div className="container mx-auto">
+        <div className="text-center responsive-spacing mb-12 lg:mb-16">
           <Badge variant="outline" className="border-primary/20 text-primary">
             Platform Features
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold">
+          <h2 className="font-bold">
             Everything You Need for
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               {" "}Student Success
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive tools designed to track, verify, and showcase student achievements 
             throughout their academic journey.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="card-grid">
           {features.map((feature, index) => (
             <Card key={index} className="gradient-card shadow-card border-card-border hover:shadow-feature transition-all duration-300 group">
               <CardHeader>

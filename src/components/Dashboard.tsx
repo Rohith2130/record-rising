@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Monitor, Smartphone, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import dashboardImage from "@/assets/dashboard-mockup.jpg";
 
 const Dashboard = () => {
@@ -90,10 +91,12 @@ const Dashboard = () => {
               </Card>
             </div>
             
-            <Button size="lg" className="gradient-primary shadow-hero w-full sm:w-auto">
-              Explore Dashboard Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/dashboard">
+              <Button size="lg" className="gradient-primary shadow-hero w-full sm:w-auto">
+                Explore Dashboard Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
